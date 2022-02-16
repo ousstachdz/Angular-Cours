@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChange } from '@angular/core';
+
+function log(target: any ,name: any ,descriptor: any){
+  console.log(target ,name ,descriptor);
+}
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'intro2angular';
+  @log
+  aSimpleMethode(){
+    console.log("Hey there !")
+  }
 }
