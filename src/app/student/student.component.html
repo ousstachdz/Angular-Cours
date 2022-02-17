@@ -1,0 +1,19 @@
+<h1>Insert new student </h1>
+
+<label > First name :
+    <input type="text" [formControl]="fName" >
+</label><br>
+
+<label > Last name :
+    <input type="text" [formControl]="lName" >
+</label><br>
+
+<label > The level :
+    <input type="number" [formControl]="level">
+</label><br>
+
+<button (click)="onSubmit()" > add </button>
+
+<h4>{{displayDataAsJson}}</h4>
+
+
