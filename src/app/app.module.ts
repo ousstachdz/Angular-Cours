@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DIService } from './di.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,7 @@ import { DIService } from './di.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [DIService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
