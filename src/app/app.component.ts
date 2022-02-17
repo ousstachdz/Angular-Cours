@@ -1,8 +1,5 @@
 import { Component, SimpleChange } from '@angular/core';
-
-function log(target: any ,name: any ,descriptor: any){
-  console.log(target ,name ,descriptor);
-}
+import { DIService } from './di.service';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +8,12 @@ function log(target: any ,name: any ,descriptor: any){
 })
 export class AppComponent {
   title = 'intro2angular';
-  @log
-  aSimpleMethode(){
-    console.log("Hey there !")
+  message: String = "";
+
+  constructor(private service : DIService){}
+
+  ngOnInit() : void{
+    this.message = this.service.titleModifier();
+    console.log(this.message)
   }
 }
