@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-student',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
+  studentName = new FormControl("");
+  studentWife = new FormControl("");
+  studentTeacher = new FormControl("");
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  
 }
